@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login Page Project</title>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <div class="leftchild">
+                <h1 style="color: black;">ENCRYPTI<i class="uil uil-keyhole-circle" style="color: #00B0FF; font-size: 40PX;"></i>N</h1>
+                <img src="./image/password.svg" alt="Main image">
+                <P>Create an account ?</P><a href="">Registration</a>
+            </div>
+            <div class="rightchild">
+                <form name="myform" >
+                    <div class="heading">
+                        <h1>Welcome Back</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="formdata">
+                        <i class="uil uil-envelope-alt"></i>
+                        <input type="email" placeholder= "Enter your E-mail" name="email" required>
+                    </div>
+                    <div class="formdata">
+                        <i class="uil uil-padlock"></i>
+                        <input type="password" placeholder="Enter your Password" name="password" id="myInput" required>
+                            <i class="uil uil-eye" onclick="togglePassword()" id="eye" style="cursor: pointer;"></i>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox"><label> Remember Me</label>
+                    </div>
+                    <div class="formbutton">
+                        <button onclick="formsubmit()">LOG IN</button>
+                    </div>
+                    <div class="otherLink">
+                        <p>Or login with </p>
+                        <a href="https://www.facebook.com" ><i class="uil uil-facebook" ="color: blue;"></i></a>
+                        <a href="https://www.twitter.com"><i class="uil uil-twitter" ="color: lightblue;"></i></a>
+                        <a href="https://www.google.com"><i class="uil uil-google" ="color: #FF6B6B;"></i></a>
+                        <a href="https://www.linkedin.com"><i class="uil uil-linkedin" ="color: #FF6B6B;"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function formsubmit(){
+            if(!myform.email.value == "" && !myform.password.value == ""){
+                alert("you have successfully logged in...!!!!");
+            }
+        }
+
+        function togglePassword(){
+            var a = document.getElementById('myInput');
+            var b = document.getElementById('eye');
+
+            if(!myform.password.value == ""){
+
+                if(a.type === "password"){
+                    a.type = "text";
+                    b.style.color ="#00B0FF";
+                }else{
+                    a.type = "password";
+                    b.style.color ="white";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

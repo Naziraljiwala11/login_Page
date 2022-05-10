@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Pacifico&family=Poppins:wght@300&family=Sacramento&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* MAIN CONTAINER OF THE WEBSITE */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./image/backgorund.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* THE CHILD CONTAINER STARTS HERE  */
+.container .child{
+    height: 80%;
+    width: 80%;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 5px 6px 30px black;
+}
+
+/* LEFTCHLD CONTAINER STARTS FROM HERE */
+.leftchild{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 30px 0 0 30px;
+}
+.leftchild p,a{
+    color: black;
+}
+.leftchild img{
+    height: 70%;
+    width: 70%;
+}
+
+/* THE RIGHTCHILD CONATINER START FROM HERE  */
+.rightchild{
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    width: 50%;
+}
+.rightchild form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.heading .line{
+    min-width: 40%;
+    height: 3px;
+    background-color:#00B0FF;
+}
+.rightchild form .heading{
+   width: 50%;
+}
+.rightchild form .formdata{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STYLING FOR INPUT EMAIL AND PASSWORD  */
+.rightchild form .formdata input{
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    border-style: hidden hidden dashed hidden;
+    border-color: white;
+    background: transparent;
+}
+.rightchild form .formdata input::placeholder{
+    color: white;
+}
+.rightchild form .formdata input:focus{
+    outline: none;
+}
+.rightchild form .formdata i{
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+/* STYLING FOR THE REMEMBER ME BUTTON  */
+.rightchild form .check{
+    width: 50%;
+    margin: 20px 0 0 10px;
+}
+
+/* STYLING FOR THE LOGIN BUTTON  */
+.rightchild form .formbutton{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightchild form .formbutton button{
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s all ease-in ;
+    border: 3px solid #00B0FF;
+    box-shadow: 3px 4px 10px black;
+}
+.rightchild form .formbutton button:hover{
+    background-color: #00B0FF;
+    color: white;
+    border: 3px solid white;
+}
+/* STYLING FOR LOGIN WITH OTHER LINK  */
+.rightchild form .otherLink{
+    width: 50%;
+    margin-top: 25px;
+}
+.rightchild form .otherLink a i{
+    font-size: 30px;
+    padding: 10px;
+}
+@media (max-width: 800px){
+    .container .child{
+        height: 90%;
+        width: 90%;
+        backdrop-filter: blur(2px);
+        flex-direction: column;
+        border-radius: 15px;
+    }
+    .leftchild{
+        height: 40%;
+        width: 90%;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .leftchild img{
+        height: 50%;
+        width: 50%;
+    }
+    .rightchild{
+        height: 50%;
+        border-radius: 0px;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .rightchild form .heading h1{
+        font-size: 25px;
+    }
+    .rightchild form .heading{
+        width: 80%;
+     }
+    .rightchild form .formdata{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightchild form .check{
+        width: 80%;
+        margin: 20px 0 0 10px;
+    }
+    .rightchild form .formbutton{
+        width: 100%;
+    }
+    .rightchild form .formbutton button{
+        border-radius: 5px;
+    }
+    /* STYLING FOR LOGIN WITH OTHER LINK  */
+    .rightchild form .otherLink{
+        width: 100%;
+        margin: 20px 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightchild form .otherLink a i{
+        font-size: 20px;
+        padding: 2px;
+        margin-left: 20px;
+    }
+}
